@@ -3,8 +3,15 @@ class MergeSort {
 
     public static void main(String args[]){
 
+        //open input file
+        //    chunk <- read next 4 GB in array
+        //    sortedChunk <- mergeSort(chunk)
+        //    output sortedChunk on disk
 
-        int[] array = {5, 4, 3, 2, 1, 42, 37, 89, 100, 1};
+        // k-way merge of files
+
+
+        String[] array = {"Scoop", "Carla", "Shrimp", "Monkeys", "Castaway"};
         System.out.println("Initial Array: ");
         printArray(array);
 
@@ -16,28 +23,28 @@ class MergeSort {
 
 
 
-    private static void printArray(int[] array){
+    private static void printArray(String[] array){
 
-        for (int i: array){
-            System.out.print(i + " ");
+        for (String s: array){
+            System.out.print(s + " ");
         }
         System.out.println();
 
     }
 
-    private static int[] mergeSort(int[] array) {
+    private static String[] mergeSort(String[] array) {
         if (array.length <= 1) {
             return array;
         }
 
         int midpoint = array.length / 2;
-        int[] left = new int[midpoint];
-        int[] right;
+        String[] left = new String[midpoint];
+        String[] right;
 
         if (array.length % 2 == 0) {
-            right = new int[midpoint];
+            right = new String[midpoint];
         } else {
-            right = new int[midpoint + 1];
+            right = new String[midpoint + 1];
         }
 
         for (int i = 0; i < midpoint; i++) {
@@ -50,7 +57,7 @@ class MergeSort {
 
         }
 
-        int[] result = new int[array.length];
+        String[] result = new String[array.length];
 
         left = mergeSort(left);
         right = mergeSort(right);
@@ -61,9 +68,9 @@ class MergeSort {
 
     }
 
-    private static int[] merge(int[] left, int[] right){
+    private static String[] merge(String[] left, String[] right){
 
-        int[] result = new int[left.length + right.length];
+        String[] result = new String[left.length + right.length];
 
         int leftPointer, rightPointer, resultPointer;
         leftPointer = rightPointer = resultPointer = 0;
@@ -72,7 +79,8 @@ class MergeSort {
 
             if(leftPointer < left.length && rightPointer < right.length){
 
-                if(left[leftPointer] < right[rightPointer]){
+                //                if(left[leftPointer] < right[rightPointer]){
+                if(left[leftPointer].compareTo(right[rightPointer]) < 0){
                     result[resultPointer++] = left[leftPointer++];
                 } else {
                     result[resultPointer++] = right[rightPointer++];
