@@ -2,7 +2,8 @@ class MergeSort {
 
 
     public static void main(String args[]){
-
+        int threads = Integer.parseInt(args[0]);
+        String fileToBeSorted = args[1];
 
         int[] array = {5, 4, 3, 2, 1, 42, 37, 89, 100, 1};
         System.out.println("Initial Array: ");
