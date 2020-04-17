@@ -123,11 +123,16 @@ class MergeSort {
 
     protected static void finalMerge(ArrayList<String> fileList){
 
-        long totalBufferSize = 8L * 1024 * 1024 * 1024;
+        long totalBufferSize = 3L * 1024 * 1024 * 1024;
         ArrayList<String[]> bufferList = new ArrayList<>();
+        ArrayList<Integer> pointerList = new ArrayList<>();
+        ArrayList<Integer> totalIterationsList = new ArrayList<>();
 
         // buffer size divided by the list size, divided by the number of bytes per line of input
-        long inputFileBufferSize = totalBufferSize/fileList.size()/100;
+        long outputFileBufferSize = totalBufferSize/100;
+        long inputFileBufferSize = outputFileBufferSize/fileList.size();
+        String[] outputBuffer = new String[(int)outputFileBufferSize];
+
         System.out.println(inputFileBufferSize);
 
 
@@ -141,21 +146,55 @@ class MergeSort {
                 File file = new File(fileList.get(i));
                 Scanner scan = new Scanner(file);
 
+                int j =0;
                 while(scan.hasNextLine()) {
-                    buffer[i] = scan.nextLine();
+                    buffer[j] = scan.nextLine();
+                    j++;
+                    if (j == inputFileBufferSize - 1){
+                        break;
+                    }
                 }
                 bufferList.add(buffer);
+                pointerList.add(0);
+                totalIterationsList.add(0);
 
 
                 } catch (IOException io){
 
             }
 
-        }
 
+        }
+        
         //now all files have their initial buffer
         // we will compare their buffer
+        String[] temp = new String[fileList.size()];
 
+        //for each buffer, get value chosen by pointer
+        for (int i = 0; i < fileList.size(); i++){
+
+            String[] buffer = bufferList.get(i);
+            String fileLine = buffer[pointerList.get(i)];
+            temp[i] = fileLine;
+
+        }
+
+        String first = "zzzzzz";
+
+        //compare all elements in temp array
+        for(int i = 0; i < fileList.size(); i++){
+
+
+
+            if(first.compareTo(temp[i]) > 0){
+                first = temp[i];
+            }
+
+        }
+
+        outputBuffer[0] = first;
+
+        System.out.println(first);
 
         //while input files still have contents
 
