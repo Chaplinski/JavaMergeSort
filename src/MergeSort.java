@@ -128,6 +128,8 @@ class MergeSort {
         ArrayList<Integer> pointerList = new ArrayList<>();
         ArrayList<Integer> totalIterationsList = new ArrayList<>();
 
+
+
         // buffer size divided by the list size, divided by the number of bytes per line of input
         long outputFileBufferSize = totalBufferSize/100;
         long inputFileBufferSize = outputFileBufferSize/fileList.size();
@@ -156,7 +158,7 @@ class MergeSort {
                 }
                 bufferList.add(buffer);
                 pointerList.add(0);
-                totalIterationsList.add(0);
+                totalIterationsList.add(1);
 
 
                 } catch (IOException io){
@@ -165,36 +167,81 @@ class MergeSort {
 
 
         }
-        
-        //now all files have their initial buffer
-        // we will compare their buffer
-        String[] temp = new String[fileList.size()];
 
-        //for each buffer, get value chosen by pointer
-        for (int i = 0; i < fileList.size(); i++){
+        //TODO get total number of strings in all files
+        // and then iterate that many times
 
-            String[] buffer = bufferList.get(i);
-            String fileLine = buffer[pointerList.get(i)];
-            temp[i] = fileLine;
+        int totalLines = 10000;
+        int linesRead = 0;
+        while(linesRead < totalLines) {
 
-        }
+            //now all files have their initial buffer
+            // we will compare their buffer
+            String[] temp = new String[fileList.size()];
 
-        String first = "zzzzzz";
+            //for each buffer, get value chosen by pointer
+            for (int i = 0; i < fileList.size(); i++) {
 
-        //compare all elements in temp array
-        for(int i = 0; i < fileList.size(); i++){
+                String[] buffer = bufferList.get(i);
+                String fileLine = null;
+                if(!buffer[pointerList.get(i)].isEmpty()) {
+                    fileLine = buffer[pointerList.get(i)];
+                } else {
+                    //TODO refill buffer
+                    try {
+                        File file = new File(fileList.get(i));
+                        Scanner scan = new Scanner(file);
+                        int previousIterations = totalIterationsList.get(i);
+                        int startingLine = (int)inputFileBufferSize * previousIterations;
+                        int finishLine = startingLine + (int)inputFileBufferSize - 1;
+
+                        int j = 0;
+                        int k = 0;
+                        while (scan.hasNextLine()) {
+                            if((j > startingLine) && (j < finishLine)) {
+                                buffer[k] = scan.nextLine();
+                                if (k == inputFileBufferSize - 1) {
+                                    break;
+                                }
+                                k++;
+                            }
+                            j++;
+                        }
+                    } catch (IOException io){
+
+                    }
 
 
+                }
 
-            if(first.compareTo(temp[i]) > 0){
-                first = temp[i];
+
+                temp[i] = fileLine;
+
             }
 
+            String first = "zzzzzz";
+            int indexOfFirst = -1;
+
+            //compare all elements in temp array
+            for (int i = 0; i < temp.length; i++) {
+
+                if (first.compareTo(temp[i]) > 0) {
+                    first = temp[i];
+                    indexOfFirst = i;
+                }
+
+            }
+
+            int pointer = pointerList.get(indexOfFirst);
+            pointer++;
+            pointerList.set(indexOfFirst, pointer);
+
+            linesRead++;
+
         }
-
-        outputBuffer[0] = first;
-
-        System.out.println(first);
+//        outputBuffer[0] = first;
+//
+//        System.out.println(first);
 
         //while input files still have contents
 
