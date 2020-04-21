@@ -123,24 +123,33 @@ class MergeSort {
 
     protected static void finalMerge(ArrayList<String> fileList){
 
-        long totalBufferSize = 3L * 1024 * 1024 * 1024;
+        long totalBufferSize = 300 * 1024;
+        long fileSize = 1L * 1024 * 1024 ;
         ArrayList<String[]> bufferList = new ArrayList<>();
         ArrayList<Integer> pointerList = new ArrayList<>();
         ArrayList<Integer> totalIterationsList = new ArrayList<>();
 
 
+        // fileSize = N/2
+        // numFiles = M / fileSize = M / (N/2)
+        // sbs = N / (numFiles + 1) = N / ((M / (N/2)) + 1 )
 
         // buffer size divided by the list size, divided by the number of bytes per line of input
-        long outputFileBufferSize = totalBufferSize/100;
-        long inputFileBufferSize = outputFileBufferSize/fileList.size();
-        String[] outputBuffer = new String[(int)outputFileBufferSize];
+        //long outputFileBufferSize = totalBufferSize/100;
+
+        long chunkSize = totalBufferSize / 2;
+        long numChunks = fileSize / chunkSize;
+        long inputFileBufferSize = totalBufferSize / (numChunks + 1);//outputFileBufferSize/fileList.size();
+        long stringSize = 200;
+        long inputFileBufferStringCount = inputFileBufferSize / stringSize;
+        String[] outputBuffer = new String[(int)inputFileBufferStringCount];
 
         System.out.println(inputFileBufferSize);
 
 
         for (int i = 0; i < fileList.size(); i++){
             //for each file create a buffer the size of 1/N * totalBufferSize
-            String[] buffer = new String[(int)inputFileBufferSize];
+            String[] buffer = new String[(int)inputFileBufferStringCount];
 
             try {
 
@@ -152,7 +161,7 @@ class MergeSort {
                 while(scan.hasNextLine()) {
                     buffer[j] = scan.nextLine();
                     j++;
-                    if (j == inputFileBufferSize - 1){
+                    if (j == inputFileBufferStringCount - 1){
                         break;
                     }
                 }
@@ -161,12 +170,13 @@ class MergeSort {
                 totalIterationsList.add(1);
 
 
-                } catch (IOException io){
+            } catch (IOException io){
 
             }
-
-
         }
+
+        // CHECK HERE THE MEMORY CONSUMPTION
+        // MUST BE 1.5G
 
         //TODO get total number of strings in all files
         // and then iterate that many times
@@ -192,7 +202,7 @@ class MergeSort {
                         File file = new File(fileList.get(i));
                         Scanner scan = new Scanner(file);
                         int previousIterations = totalIterationsList.get(i);
-                        int startingLine = (int)inputFileBufferSize * previousIterations;
+                        int startingLine = (int)inputFileBufferStringCount * previousIterations;
                         int finishLine = startingLine + (int)inputFileBufferSize - 1;
 
                         int j = 0;
@@ -245,16 +255,16 @@ class MergeSort {
 
         //while input files still have contents
 
-            //while outputBuffer is not full
-                //get first value in each input file buffer
+        //while outputBuffer is not full
+        //get first value in each input file buffer
 
-                //compare all values and add the i lowest one to the buffer[i]
+        //compare all values and add the i lowest one to the buffer[i]
 
-                //get next value from file that just added
+        //get next value from file that just added
 
-            //when output buffer is full, write buffer to storage
+        //when output buffer is full, write buffer to storage
 
-            //empty buffer
+        //empty buffer
 
 
 

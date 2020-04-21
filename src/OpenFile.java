@@ -12,8 +12,8 @@ public class OpenFile {
 
         ArrayList<String> fileList = new ArrayList<>();
 
-        int bufferSize = 3000;
-        File file = new File("testfile.txt");
+        int bufferSize = 8;
+        File file = new File("testfile2.txt");
         Scanner scan = new Scanner(file);
         String[] buffer = new String[bufferSize];
 
