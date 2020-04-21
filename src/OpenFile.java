@@ -12,7 +12,7 @@ public class OpenFile {
 
         ArrayList<String> fileList = new ArrayList<>();
 
-        int bufferSize = 8;
+        int bufferSize = 20;
         File file = new File("testfile2.txt");
         Scanner scan = new Scanner(file);
         String[] buffer = new String[bufferSize];

@@ -1,4 +1,6 @@
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -123,8 +125,8 @@ class MergeSort {
 
     protected static void finalMerge(ArrayList<String> fileList){
 
-        long totalBufferSize = 300 * 1024;
-        long fileSize = 1L * 1024 * 1024 ;
+        long totalBufferSize = 4 * 1024;
+        long fileSize = 6 * 1024 ;
         ArrayList<String[]> bufferList = new ArrayList<>();
         ArrayList<Integer> pointerList = new ArrayList<>();
         ArrayList<Integer> totalIterationsList = new ArrayList<>();
@@ -137,14 +139,12 @@ class MergeSort {
         // buffer size divided by the list size, divided by the number of bytes per line of input
         //long outputFileBufferSize = totalBufferSize/100;
 
-        long chunkSize = totalBufferSize / 2;
+        long chunkSize = totalBufferSize / fileList.size();
         long numChunks = fileSize / chunkSize;
         long inputFileBufferSize = totalBufferSize / (numChunks + 1);//outputFileBufferSize/fileList.size();
         long stringSize = 200;
         long inputFileBufferStringCount = inputFileBufferSize / stringSize;
         String[] outputBuffer = new String[(int)inputFileBufferStringCount];
-
-        System.out.println(inputFileBufferSize);
 
 
         for (int i = 0; i < fileList.size(); i++){
@@ -181,7 +181,8 @@ class MergeSort {
         //TODO get total number of strings in all files
         // and then iterate that many times
 
-        int totalLines = 10000;
+        int totalLines = 50;
+        int totalIterations = totalLines/(outputBuffer.length);
         int linesRead = 0;
         while(linesRead < totalLines) {
 
@@ -194,7 +195,9 @@ class MergeSort {
 
                 String[] buffer = bufferList.get(i);
                 String fileLine = null;
-                if(!buffer[pointerList.get(i)].isEmpty()) {
+
+                //TODO pointerList[0] is incrementing to 3, which gives a NullPointerException
+                if(buffer[pointerList.get(i)].length() < 2) {
                     fileLine = buffer[pointerList.get(i)];
                 } else {
                     //TODO refill buffer
@@ -240,6 +243,25 @@ class MergeSort {
                     indexOfFirst = i;
                 }
 
+            }
+
+            int bufferIndex = linesRead % outputBuffer.length;
+            outputBuffer[bufferIndex] = first;
+
+            if(((linesRead + 1)  % outputBuffer.length) == 0){
+                try {
+                    BufferedWriter output = new BufferedWriter(new FileWriter("finaloutput.txt", true));
+                    for (String s : outputBuffer) {
+                        if (s.compareTo("") != 0) {
+                            output.append(s);
+                            ((BufferedWriter) output).newLine();
+                        }
+                    }
+                    output.close();
+                    System.out.println("here");
+                } catch (IOException io) {
+
+                }
             }
 
             int pointer = pointerList.get(indexOfFirst);
