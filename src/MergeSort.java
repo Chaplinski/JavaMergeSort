@@ -123,7 +123,7 @@ class MergeSort {
     protected static void finalMerge(ArrayList<String> fileList){
 
         long totalBufferSize = 4 * 1024;
-        long fileSize = 6 * 1024 ;
+        long fileSize = 6 * 1024;
         ArrayList<String[]> bufferList = new ArrayList<>();
         ArrayList<Integer> pointerList = new ArrayList<>();
         ArrayList<Integer> totalIterationsList = new ArrayList<>();
@@ -223,6 +223,9 @@ class MergeSort {
                         //TODO if file has been iterated over but file's buffer has not been refilled then fill rest of buffer with all block string
                         while (scan.hasNextLine()) {
 
+                            if(j == 240){
+                                System.out.println("here we are");
+                            }
                             //TODO when file is out of lines then no longer refill buffer.
                             if((j >= startingLine) && (j <= finishLine)) {
                                 buffer[k] = scan.nextLine();
@@ -264,7 +267,7 @@ class MergeSort {
 
             String first = "■■■■■■";
 
-            int indexOfFirst = -2;
+            int indexOfFirst = 0;
 
             //TODO on iteration 47/48 indexOfFirst is not getting set again in the for loop
             //compare all elements in temp array
@@ -305,11 +308,11 @@ class MergeSort {
                 }
             }
 
-            if (linesRead == 47){
+            if (linesRead == 998){
                 System.out.println(linesRead);
             }
 
-            System.out.println(linesRead);
+//            System.out.println(linesRead);
             int pointer = pointerList.get(indexOfFirst);
             pointer++;
             pointerList.set(indexOfFirst, pointer);
