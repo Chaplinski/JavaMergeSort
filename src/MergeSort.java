@@ -294,7 +294,7 @@ class MergeSort {
                         if ((s.compareTo("") != 0)) {
                             output.append(s);
                             ((BufferedWriter) output).newLine();
-                            if((linesRead == totalLines - 1) && (i >= maxIterations - 1)){
+                            if((linesRead == totalLines - 1) && (i >= maxIterations - 1) && (bufferIndex == i)){
                                 break;
 
                             }

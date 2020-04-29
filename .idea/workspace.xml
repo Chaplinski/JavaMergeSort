@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f9c8ef1-1d3f-4c1a-8728-c06d55c66aef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/runall.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Multithread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testfile3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finaloutput.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MergeSort/MergeSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MergeSort/MergeSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MergeSort/OpenFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MergeSort/OpenFile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testfile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testwrite1.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testwrite2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testwrite3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testwrite4.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,35 +22,35 @@
     <session id="193410816">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="4" />
-          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="8" />
           <entry key="sh" value="2" />
-          <entry key="txt" value="125" />
+          <entry key="txt" value="140" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bash" value="1" />
           <entry key="JAVA" value="8" />
-          <entry key="PLAIN_TEXT" value="126" />
+          <entry key="PLAIN_TEXT" value="141" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10819" />
+          <entry key="java" value="10873" />
           <entry key="sh" value="219" />
           <entry key="txt" value="28" />
         </counts>
@@ -63,7 +58,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="195" />
-          <entry key="JAVA" value="10819" />
+          <entry key="JAVA" value="10873" />
           <entry key="PLAIN_TEXT" value="52" />
         </counts>
       </usages-collector>
@@ -74,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MergeSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="307" column="32" selection-start-line="307" selection-start-column="32" selection-end-line="307" selection-end-column="32" />
+            <state relative-caret-position="70">
+              <caret line="275" column="51" lean-forward="true" selection-start-line="275" selection-start-column="51" selection-end-line="275" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="73" column="23" lean-forward="true" selection-start-line="72" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+            <state relative-caret-position="1190">
+              <caret line="73" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testfile.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
+            <state relative-caret-position="17000">
               <caret line="1000" selection-start-line="1000" selection-end-line="1000" />
             </state>
           </provider>
@@ -107,14 +102,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Multithread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="459">
               <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1273#1274#0" expanded="true" />
-                <element signature="e#1302#1303#0" expanded="true" />
-                <element signature="e#1353#1354#0" expanded="true" />
-                <element signature="e#1389#1390#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,8 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,10 +208,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588118122899" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588118170258" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -256,7 +247,7 @@
     <configuration name="Multithread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Multithread" />
       <module name="MergeSort" />
-      <option name="PROGRAM_PARAMETERS" value="testfile.txt 4" />
+      <option name="PROGRAM_PARAMETERS" value="testfile.txt 8" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -298,7 +289,7 @@
     <frame x="2728" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22334754" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22547974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -308,11 +299,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4121475" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3329718" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3329718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.23644252" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.23644252" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3286334" />
@@ -362,9 +353,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MergeSort.java</url>
-          <line>288</line>
+          <line>311</line>
           <properties />
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MergeSort.java</url>
+          <line>226</line>
+          <properties />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -422,52 +419,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3818" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3774" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3818" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite5.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Multithread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1273#1274#0" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
-            <element signature="e#1389#1390#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finaloutput.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16495" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3762" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="73" column="23" lean-forward="true" selection-start-line="72" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+        <state relative-caret-position="1190">
+          <caret line="73" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -476,15 +431,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testfile.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
+        <state relative-caret-position="17000">
           <caret line="1000" selection-start-line="1000" selection-end-line="1000" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Multithread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testwrite1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="250" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testwrite2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="17" lean-forward="true" selection-end-line="250" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testwrite3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="22" selection-end-line="250" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testwrite4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="209" column="98" lean-forward="true" selection-end-line="250" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testwrite5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2605" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finaloutput.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="1000" lean-forward="true" selection-start-line="1000" selection-end-line="1000" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MergeSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="307" column="32" selection-start-line="307" selection-start-column="32" selection-end-line="307" selection-end-column="32" />
+        <state relative-caret-position="70">
+          <caret line="275" column="51" lean-forward="true" selection-start-line="275" selection-start-column="51" selection-end-line="275" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
