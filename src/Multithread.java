@@ -22,33 +22,44 @@ public class Multithread {
         long totalStringCount = fileByteSize/100;
 
         //get number of strings that will be in each individuals threads String[] buffer
-        long stringsPerThread = totalStringCount/totalThreadCount;
-
+//        long stringsPerThread = totalStringCount/totalThreadCount;
+//
+//        long stringRemainder = totalStringCount % totalThreadCount;
         //create and use Scanner object
         Scanner scan = new Scanner(file);
 
+        long stringRemainder = totalStringCount % totalThreadCount;
+        long stringsPerThread = totalStringCount/totalThreadCount;
 
         for (int i = 0; i < totalThreadCount; i++) {
+            long stringsThisThread = stringsPerThread;
+
+
+            //TODO Why is file 3 getting 13 lines and file 4 only getting 11?
             //for each thread
+            if(stringRemainder >= i){
+                stringsThisThread = stringsThisThread + 1;
+                stringRemainder--;
+            }
 
             int j = 0;
             int file_num = 1;
             //create empty String[] buffer
-            String[] buffer = new String[(int) stringsPerThread];
+            String[] buffer = new String[(int) stringsThisThread];
 
             while (scan.hasNextLine()) {
                 buffer[j] = scan.nextLine();
 
-                if ((j >= stringsPerThread - 1) || (!scan.hasNextLine())) {
+                if ((j >= stringsThisThread - 1) || (!scan.hasNextLine())) {
                     //mergesort buffer
 
                     Task task = new Task();
                     task.setBuffer(buffer);
                     task.run();
                     buffer = task.getBuffer();
-                    System.out.println("Thread " + file_num + " started");
 
-                    String filename = "testwrite" + file_num + ".txt";
+                    int gigs = (int)fileByteSize/1000000000;
+                    String filename = "t" + totalThreadCount + "f" + file_num + "s" + gigs + ".txt";
                     //write sorted buffer to disk
                     Writer output = new BufferedWriter(new FileWriter(filename, true));
 

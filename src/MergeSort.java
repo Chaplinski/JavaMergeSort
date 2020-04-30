@@ -7,14 +7,6 @@ class MergeSort {
 
     public static void main(String args[]){
 
-        //open input file
-        //    chunk <- read next 4 GB in array
-        //    sortedChunk <- mergeSort(chunk)
-        //    output sortedChunk on disk
-
-        // k-way merge of files
-
-
         String[] array = args;
         System.out.println("Initial Array: ");
         printArray(array);
@@ -94,7 +86,6 @@ class MergeSort {
 
             if(leftPointer < left.length && rightPointer < right.length){
 
-                //                if(left[leftPointer] < right[rightPointer]){
                 if(left[leftPointer].compareTo(right[rightPointer]) < 0){
                     result[resultPointer++] = left[leftPointer++];
                 } else {
@@ -114,270 +105,86 @@ class MergeSort {
             }
 
         }
-
-
         return result;
-
     }
 
-    protected static void finalMerge(ArrayList<String> fileList){
+    protected static void finalMerge(ArrayList<String> fileList)throws IOException{
 
-        long totalBufferSize = 4 * 1024;
-        long fileSize = 6 * 1024;
         ArrayList<String[]> bufferList = new ArrayList<>();
-        ArrayList<Integer> pointerList = new ArrayList<>();
-        ArrayList<Integer> totalIterationsList = new ArrayList<>();
-        ArrayList<Integer> totalStringsPerFileList = new ArrayList<>();
+        int numberOfFiles = fileList.size();
+        int[] pointers = new int[numberOfFiles];
+        int[] stringCountPerFile = new int[numberOfFiles];
+        long sizeOfAllFiles = 0;
+        for(int i=0; i < fileList.size(); i++){
+            // get file
+            File file = new File(fileList.get(i));
 
+            //get number of strings in file
+            long fileByteSize = file.length();
+            long stringsInFile = fileByteSize/100;
+            stringCountPerFile[i] = (int)stringsInFile;
 
-        // fileSize = N/2
-        // numFiles = M / fileSize = M / (N/2)
-        // sbs = N / (numFiles + 1) = N / ((M / (N/2)) + 1 )
+            //add size of this file to running total
+            sizeOfAllFiles += fileByteSize;
 
-        // buffer size divided by the list size, divided by the number of bytes per line of input
-        //long outputFileBufferSize = totalBufferSize/100;
+            //set pointer to 0 for this file's buffer
+            pointers[i] = 0;
 
-        long chunkSize = totalBufferSize / fileList.size();
-        long numChunks = fileSize / chunkSize;
-        long inputFileBufferSize = totalBufferSize / (numChunks + 1);//outputFileBufferSize/fileList.size();
-        long stringSize = 200;
-        long inputFileBufferStringCount = inputFileBufferSize / stringSize;
-        String[] outputBuffer = new String[(int)inputFileBufferStringCount];
+            String[] buffer = new String[(int)stringsInFile + 1];
+            Scanner scan = new Scanner(file);
 
-
-        for (int i = 0; i < fileList.size(); i++){
-            //TODO find number of strings in each each file and store in a list
-            String filename = fileList.get(i);
-            long longNumStrings = new File(filename).length()/100;
-            int numStrings = (int)longNumStrings;
-            totalStringsPerFileList.add(numStrings);
-
-            //for each file create a buffer the size of 1/N * totalBufferSize
-            String[] buffer = new String[(int)inputFileBufferStringCount];
-
-            try {
-
-                //fill each buffer with x number of values from respective file
-                File file = new File(fileList.get(i));
-                Scanner scan = new Scanner(file);
-
-                int j =0;
-                while(scan.hasNextLine()) {
-                    buffer[j] = scan.nextLine();
-                    j++;
-                    if (j == inputFileBufferStringCount){
-                        break;
-                    }
-                }
-                bufferList.add(buffer);
-                pointerList.add(0);
-                totalIterationsList.add(1);
-
-
-            } catch (IOException io){
-
+            //fill buffer
+            int j = 0;
+            while(scan.hasNextLine()){
+                buffer[j] = scan.nextLine();
+                j++;
             }
+            buffer[(int)stringsInFile] = "■■■■■■■■";
+
+            bufferList.add(buffer);
+
         }
 
-        // CHECK HERE THE MEMORY CONSUMPTION
-        // MUST BE 1.5G
+        final long inputFileStringCount = sizeOfAllFiles/100;
+        int currentIteration = 0;
+        String[] outputBuffer = new String[(int)inputFileStringCount];
 
-        //TODO get total number of strings in all files
-        // and then iterate that many times
+        while(currentIteration < inputFileStringCount) {
+            String[] temp = new String[numberOfFiles];
 
-        int totalLines = 0;
-        for(int i = 0; i < totalStringsPerFileList.size(); i++) {
-            totalLines += totalStringsPerFileList.get(i);
-        }
-
-        int totalIterations = totalLines/(outputBuffer.length);
-        int linesRead = 0;
-        while(linesRead < totalLines) {
-
-            //now all files have their initial buffer
-            // we will compare their buffer
-            String[] temp = new String[fileList.size()];
-
-            //for each buffer, get value chosen by pointer
-            for (int i = 0; i < fileList.size(); i++) {
-
-                String[] buffer = bufferList.get(i);
-                String fileLine = "■■■■■■■■";
-
-                //TODO pointerList[0] is incrementing to 3, which gives a NullPointerException
-                if(pointerList.get(i) <= inputFileBufferStringCount -1) {
-                    fileLine = buffer[pointerList.get(i)];
-                } else {
-                    //TODO refill buffer
-                    try {
-                        File file = new File(fileList.get(i));
-                        Scanner scan = new Scanner(file);
-                        int previousIterations = totalIterationsList.get(i);
-                        int startingLine = (int)inputFileBufferStringCount * previousIterations;
-                        int finishLine = startingLine + (int)inputFileBufferStringCount - 1;
-                        int stringsInThisFile = totalStringsPerFileList.get(i);
-
-                        int j = 0;
-                        int k = 0;
-
-                        //TODO if file has been iterated over but file's buffer has not been refilled then fill rest of buffer with all block string
-                        while (scan.hasNextLine()) {
-
-                            if(j == 240){
-                                System.out.println("here we are");
-                            }
-                            //TODO when file is out of lines then no longer refill buffer.
-                            if((j >= startingLine) && (j <= finishLine)) {
-                                buffer[k] = scan.nextLine();
-                                k++;
-                            } else {
-                                scan.nextLine();
-                            }
-
-                            if (k >= inputFileBufferStringCount) {
-                                //get first element in new buffer
-//                                fileLine = buffer[0];
-                                //reset pointer for this buffer
-                                pointerList.set(i, 0);
-                                break;
-                            }
-                            j++;
-                        }
-                        //TODO while k is less than bufferSize
-                        //handles filling rest of buffer at end of files where buffer does not fill completely
-                        while(k < inputFileBufferStringCount){
-                            fileLine = buffer[0];
-                            pointerList.set(i, 0);
-
-                            buffer[k] = "■■■■■■";
-                            k++;
-                        }
-                        totalIterationsList.set(i, previousIterations + 1);
-                    } catch (IOException io){
-
-                    }
-
-
-                }
-
-
-                temp[i] = fileLine;
+            for (int i = 0; i < numberOfFiles; i++) {
+                String[] thisBuffer = bufferList.get(i);
+                String nextLine = thisBuffer[pointers[i]];
+                temp[i] = nextLine;
 
             }
 
             String first = "■■■■■■";
-
             int indexOfFirst = 0;
 
-            //TODO on iteration 47/48 indexOfFirst is not getting set again in the for loop
-            //compare all elements in temp array
             for (int i = 0; i < temp.length; i++) {
-
                 if (first.compareTo(temp[i]) > 0) {
                     first = temp[i];
                     indexOfFirst = i;
                 }
-
             }
 
-            int bufferIndex = linesRead % outputBuffer.length;
-            outputBuffer[bufferIndex] = first;
+            outputBuffer[currentIteration] = temp[indexOfFirst];
+            pointers[indexOfFirst]++;
 
-            if((((linesRead + 1)  % outputBuffer.length) == 0) || (linesRead == totalLines - 1)){
-                long longFinalBufferOutputIterations = totalLines - (totalIterations * inputFileBufferStringCount);
-                int maxIterations = (int)longFinalBufferOutputIterations;
-
-                try {
-                    BufferedWriter output = new BufferedWriter(new FileWriter("finaloutput.txt", true));
-                    int i =0;
-                    for (String s : outputBuffer) {
-                        if ((s.compareTo("") != 0)) {
-                            output.append(s);
-                            ((BufferedWriter) output).newLine();
-                            if((linesRead == totalLines - 1) && (i >= maxIterations - 1) && (bufferIndex == i)){
-                                break;
-
-                            }
-                        }
-                        i++;
-                    }
-                    //TODO clear outputBuffer?
-                    output.close();
-                } catch (IOException io) {
-
-                }
-            }
-
-            if (linesRead == 998){
-                System.out.println(linesRead);
-            }
-
-//            System.out.println(linesRead);
-            int pointer = pointerList.get(indexOfFirst);
-            pointer++;
-            pointerList.set(indexOfFirst, pointer);
-
-            linesRead++;
-
+            currentIteration++;
         }
-//        outputBuffer[0] = first;
-//
-//        System.out.println(first);
 
-        //while input files still have contents
+        int gigs = (int)sizeOfAllFiles/1000000000;
+        BufferedWriter output = new BufferedWriter(new FileWriter("outputThreads" + numberOfFiles + "size" + gigs + ".txt", true));
+        for(int i = 0; i < outputBuffer.length; i++ ){
+            output.append(outputBuffer[i]);
+            output.newLine();
+        }
+        output.close();
 
-        //while outputBuffer is not full
-        //get first value in each input file buffer
-
-        //compare all values and add the i lowest one to the buffer[i]
-
-        //get next value from file that just added
-
-        //when output buffer is full, write buffer to storage
-
-        //empty buffer
-
-
-
-//        String[] result = new String[left.length + right.length];
-//
-//        int leftPointer, rightPointer, resultPointer;
-//        leftPointer = rightPointer = resultPointer = 0;
-//
-//        while(leftPointer < left.length || rightPointer < right.length){
-//
-//            if(leftPointer < left.length && rightPointer < right.length){
-//
-//                //                if(left[leftPointer] < right[rightPointer]){
-//                if(left[leftPointer].compareTo(right[rightPointer]) < 0){
-//                    result[resultPointer++] = left[leftPointer++];
-//                } else {
-//                    result[resultPointer++] = right[rightPointer++];
-//                }
-//
-//            }
-//
-//            else if(leftPointer < left.length){
-//
-//                result[resultPointer++] = left[leftPointer++];
-//
-//            }
-//
-//            else if (rightPointer < right.length){
-//                result[resultPointer++] = right[rightPointer++];
-//            }
-//
-//        }
     }
 }
-
-
-
-
-
-
-
-
 
 
 
