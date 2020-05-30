@@ -2,10 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f9c8ef1-1d3f-4c1a-8728-c06d55c66aef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/runalljava.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Multithread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Multithread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testfile2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testfile2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MergeSort.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MySort.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/captmidn.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nexfile.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MergeSort/MergeSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MergeSort/Multithread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MergeSort/OpenFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MergeSort/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputThreads3size0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/mergesort/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Multithread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/mergesort/MyMerge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/t3f1s0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/t3f2s0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/t3f3s0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testfile.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testfile2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testfile3.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,81 +34,77 @@
     <session id="193410816">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.10" value="6" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="3" />
-          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="10" />
-          <entry key="sh" value="2" />
-          <entry key="txt" value="194" />
+          <entry key="1gig" value="2" />
+          <entry key="java" value="11" />
+          <entry key="sh" value="4" />
+          <entry key="txt" value="201" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="1" />
-          <entry key="JAVA" value="10" />
-          <entry key="PLAIN_TEXT" value="195" />
+          <entry key="Bash" value="3" />
+          <entry key="JAVA" value="11" />
+          <entry key="PLAIN_TEXT" value="204" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="12416" />
-          <entry key="sh" value="219" />
+          <entry key="java" value="13117" />
+          <entry key="sh" value="233" />
           <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="195" />
-          <entry key="JAVA" value="12416" />
+          <entry key="Bash" value="209" />
+          <entry key="JAVA" value="13117" />
           <entry key="PLAIN_TEXT" value="53" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="393649964">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MergeSort.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="178" column="115" selection-start-line="178" selection-start-column="115" selection-end-line="178" selection-end-column="115" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outputThreads6size0.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/t6f6s0.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Multithread.java">
+        <entry file="file://$PROJECT_DIR$/src/com/java/mergesort/MergeSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1666">
-              <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+            <state relative-caret-position="1547">
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,19 +113,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testfile.txt">
+        <entry file="file://$PROJECT_DIR$/src/com/java/mergesort/MyMerge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="1000" selection-start-line="1000" selection-end-line="1000" />
+            <state relative-caret-position="1224">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testfile2.txt">
+        <entry file="file://$PROJECT_DIR$/runall.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="153">
+              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runalljava.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -129,7 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>uF</find>
       <find>v%^RG^ci[X  00000000000000000000000000000016  7777BBBBFFFF999922229999DDDD3333CCCCAAAACCCCBBBBBBBB</find>
       <find>my+=5r7(N|  00000000000000000000000000000008  22226666CCCC66662222FFFF0000EEEE11118888444455559999</find>
       <find>mz4VCN</find>
@@ -159,6 +182,7 @@
       <find>append</find>
       <find>system</find>
       <find>finalou</find>
+      <find>File Byte Size</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,16 +200,20 @@
         <option value="$PROJECT_DIR$/src/OpenFile.java" />
         <option value="$PROJECT_DIR$/testfile.txt" />
         <option value="$PROJECT_DIR$/testfile2.txt" />
-        <option value="$PROJECT_DIR$/src/Multithread.java" />
         <option value="$PROJECT_DIR$/src/MergeSort.java" />
+        <option value="$PROJECT_DIR$/src/Multithread.java" />
+        <option value="$PROJECT_DIR$/runalljava.sh" />
+        <option value="$PROJECT_DIR$/src/com/java/mergesort/Multithread.java" />
+        <option value="$PROJECT_DIR$/src/com/java/mergesort/MyMerge.java" />
+        <option value="$PROJECT_DIR$/src/com/java/mergesort/MergeSort.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2728" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="2762" />
+    <option name="height" value="1770" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -194,33 +222,44 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="MergeSort" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="MySort" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MergeSort" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="MySort" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MergeSort" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MySort" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mergesort" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588213072323" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588470363432" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\scott\Development\Algorithms\Java\src\com\java\mergesort" />
       <recent name="C:\Users\scott\Development\Algorithms\Java" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\scott\Development\Algorithms\Java" />
     </key>
   </component>
@@ -236,26 +275,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Multithread">
+  <component name="RunManager" selected="Application.MyMerge">
     <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MergeSort" />
-      <module name="MergeSort" />
+      <option name="MAIN_CLASS_NAME" value="com.java.mergesort.MergeSort" />
+      <module name="MySort" />
       <option name="PROGRAM_PARAMETERS" value="scoop" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Multithread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Multithread" />
-      <module name="MergeSort" />
-      <option name="PROGRAM_PARAMETERS" value="testfile.txt 3" />
+      <option name="MAIN_CLASS_NAME" value="com.java.mergesort.Multithread" />
+      <module name="MySort" />
+      <option name="PROGRAM_PARAMETERS" value="1gig.txt 4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyMerge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.java.mergesort.MyMerge" />
+      <module name="MySort" />
+      <option name="PROGRAM_PARAMETERS" value="1gig.txt 4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.java.mergesort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="OpenFile" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="OpenFile" />
-      <module name="MergeSort" />
+      <module name="MySort" />
       <option name="PROGRAM_PARAMETERS" value="testfile2.txt 4" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -265,9 +318,11 @@
       <item itemvalue="Application.OpenFile" />
       <item itemvalue="Application.MergeSort" />
       <item itemvalue="Application.Multithread" />
+      <item itemvalue="Application.MyMerge" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyMerge" />
         <item itemvalue="Application.Multithread" />
         <item itemvalue="Application.MergeSort" />
       </list>
@@ -287,10 +342,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2728" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23027718" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24187453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -298,13 +352,13 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4121475" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3275862" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19305857" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3329718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.23644252" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28912467" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3286334" />
@@ -321,35 +375,9 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MergeSort.java</url>
-          <line>141</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MergeSort.java</url>
-          <line>173</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nexfile.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/captmidn.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7004">
-          <caret line="412" column="77" selection-start-line="412" selection-start-column="77" selection-end-line="412" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/nexfile.txt" />
+    <entry file="file://$PROJECT_DIR$/captmidn.txt" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -374,104 +402,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testfile3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/testfile3.txt" />
+    <entry file="file://$PROJECT_DIR$/testwrite8.txt" />
+    <entry file="file://$PROJECT_DIR$/testwrite7.txt" />
+    <entry file="file://$PROJECT_DIR$/testwrite2.txt" />
+    <entry file="file://$PROJECT_DIR$/testwrite3.txt" />
+    <entry file="file://$PROJECT_DIR$/testwrite4.txt" />
+    <entry file="file://$PROJECT_DIR$/testwrite5.txt" />
+    <entry file="file://$PROJECT_DIR$/testwrite1.txt" />
+    <entry file="file://$PROJECT_DIR$/testwrite6.txt" />
+    <entry file="file://$PROJECT_DIR$/finaloutput.txt" />
+    <entry file="file://$PROJECT_DIR$/outputThreads6size0.txt" />
+    <entry file="file://$PROJECT_DIR$/t6f6s0.txt" />
+    <entry file="file://$PROJECT_DIR$/testfile.txt" />
+    <entry file="file://$PROJECT_DIR$/testfile2.txt" />
+    <entry file="file://$PROJECT_DIR$/t3f2s0.txt" />
+    <entry file="file://$PROJECT_DIR$/t3f3s0.txt" />
+    <entry file="file://$PROJECT_DIR$/outputThreads3size0.txt" />
+    <entry file="file://$PROJECT_DIR$/1gig.txt" />
+    <entry file="file://$PROJECT_DIR$/t4f1s1.txt" />
+    <entry file="file://$PROJECT_DIR$/src/OpenFile.java" />
+    <entry file="file://$PROJECT_DIR$/outputThreads4size1.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/java/mergesort/MergeSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/mergesort/MyMerge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/runall.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="153">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite8.txt">
+    <entry file="file://$PROJECT_DIR$/runalljava.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1710" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite7.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1710" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="73" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testfile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="1000" selection-start-line="1000" selection-end-line="1000" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testfile2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite2.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite4.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite5.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testwrite6.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finaloutput.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Multithread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MergeSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="178" column="115" selection-start-line="178" selection-start-column="115" selection-end-line="178" selection-end-column="115" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outputThreads6size0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t6f6s0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MergeSort</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -1,4 +1,7 @@
+package com.java.mergesort;
+
 import java.io.*;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,22 +11,16 @@ class MergeSort {
     public static void main(String args[]){
 
         String[] array = args;
-        System.out.println("Initial Array: ");
         printArray(array);
 
         array = mergeSort(array);
-        System.out.println("Sorted Array: ");
         printArray(array);
     }
 
     public String[] runClass(String[] args){
         String[] array = args;
-//        System.out.println("Initial Array: ");
-//        printArray(array);
 //
         array = mergeSort(array);
-//        System.out.println("Sorted Array: ");
-//        printArray(array);
         return array;
     }
 
@@ -108,24 +105,24 @@ class MergeSort {
         return result;
     }
 
-    protected static void finalMerge(ArrayList<String> fileList)throws IOException{
+    protected static void finalMerge(ArrayList<String> fileList, int[] stringsPerFile)throws IOException{
 
         ArrayList<String[]> bufferList = new ArrayList<>();
         int numberOfFiles = fileList.size();
         int[] pointers = new int[numberOfFiles];
         int[] stringCountPerFile = new int[numberOfFiles];
-        long sizeOfAllFiles = 0;
+        long stringsInAllFilesCombined = 0;
         for(int i=0; i < fileList.size(); i++){
             // get file
             File file = new File(fileList.get(i));
 
             //get number of strings in file
             long fileByteSize = file.length();
-            long stringsInFile = fileByteSize/100;
+            long stringsInFile = stringsPerFile[i];
             stringCountPerFile[i] = (int)stringsInFile;
 
             //add size of this file to running total
-            sizeOfAllFiles += fileByteSize;
+            stringsInAllFilesCombined += stringsInFile;
 
             //set pointer to 0 for this file's buffer
             pointers[i] = 0;
@@ -145,11 +142,10 @@ class MergeSort {
 
         }
 
-        final long inputFileStringCount = sizeOfAllFiles/100;
         int currentIteration = 0;
-        String[] outputBuffer = new String[(int)inputFileStringCount];
+        String[] outputBuffer = new String[(int)stringsInAllFilesCombined];
 
-        while(currentIteration < inputFileStringCount) {
+        while(currentIteration < stringsInAllFilesCombined) {
             String[] temp = new String[numberOfFiles];
 
             for (int i = 0; i < numberOfFiles; i++) {
@@ -171,11 +167,10 @@ class MergeSort {
 
             outputBuffer[currentIteration] = temp[indexOfFirst];
             pointers[indexOfFirst]++;
-
             currentIteration++;
         }
 
-        int gigs = (int)sizeOfAllFiles/1000000000;
+        int gigs = (int)stringsInAllFilesCombined/10000000;
         BufferedWriter output = new BufferedWriter(new FileWriter("outputThreads" + numberOfFiles + "size" + gigs + ".txt", true));
         for(int i = 0; i < outputBuffer.length; i++ ){
             output.append(outputBuffer[i]);

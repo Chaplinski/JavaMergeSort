@@ -1,9 +1,11 @@
+package com.java.mergesort;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Multithread {
+public class MyMerge {
 
     public static void main(String args[]) throws IOException {
 
@@ -12,7 +14,7 @@ public class Multithread {
         long totalThreadCount = Integer.parseInt(args[1]);
 
         ArrayList<String> fileList = new ArrayList<>();
-
+        int[] stringsPerFile = new int[(int)totalThreadCount];
 
         //get size of inputFile
         File file = new File(inputFile);
@@ -21,10 +23,6 @@ public class Multithread {
         //get total number of strings in inputFile
         long totalStringCount = fileByteSize/100;
 
-        //get number of strings that will be in each individuals threads String[] buffer
-//        long stringsPerThread = totalStringCount/totalThreadCount;
-//
-//        long stringRemainder = totalStringCount % totalThreadCount;
         //create and use Scanner object
         Scanner scan = new Scanner(file);
 
@@ -35,9 +33,8 @@ public class Multithread {
             long stringsThisThread = stringsPerThread;
 
 
-            //TODO Why is file 3 getting 13 lines and file 4 only getting 11?
             //for each thread
-            if(stringRemainder >= i){
+            if((stringRemainder >= i) && (stringRemainder != 0)){
                 stringsThisThread = stringsThisThread + 1;
                 stringRemainder--;
             }
@@ -46,6 +43,7 @@ public class Multithread {
             int file_num = 1;
             //create empty String[] buffer
             String[] buffer = new String[(int) stringsThisThread];
+            stringsPerFile[i] = (int)stringsThisThread;
 
             while (scan.hasNextLine()) {
                 buffer[j] = scan.nextLine();
@@ -64,11 +62,15 @@ public class Multithread {
                     Writer output = new BufferedWriter(new FileWriter(filename, true));
 
                     fileList.add(filename);
+                    int k = 0;
+                    int m = 0;
                     for (String s : buffer) {
                         if (s.compareTo("") != 0) {
                             output.append(s);
                             ((BufferedWriter) output).newLine();
+                            k++;
                         }
+                        m++;
                     }
                     output.close();
 
@@ -77,16 +79,13 @@ public class Multithread {
                     j = -1;
                     file_num++;
                     Arrays.fill(buffer, "");
-
-                    //reset i to 0
-
                 }
 
                 j++;
             }
         }
         MergeSort ms = new MergeSort();
-        ms.finalMerge(fileList);
+        ms.finalMerge(fileList, stringsPerFile);
     }
 
 }
